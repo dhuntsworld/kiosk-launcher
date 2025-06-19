@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KioskLauncher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+                <h1>KioskLauncher</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <label for="url-input">Enter URL:</label>
+                <input 
+                    type="text" 
+                    id="url-input" 
+                    placeholder="https://example.com"
+                    autocomplete="off"
+                >
+                <button id="launch-btn" class="launch-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                        <line x1="8" y1="21" x2="16" y2="21"/>
+                        <line x1="12" y1="17" x2="12" y2="21"/>
+                    </svg>
+                    Launch in Kiosk Mode
+                </button>
+            </div>
+
+            <div class="recent-section">
+                <h3>Recent URLs:</h3>
+                <div id="recent-urls" class="recent-list">
+                    <!-- Recent URLs will be populated here -->
+                </div>
+            </div>
+
+            <div id="status" class="status hidden"></div>
+        </main>
+
+        <footer>
+            <p>Enter any URL to launch it in Chrome's kiosk mode</p>
+        </footer>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

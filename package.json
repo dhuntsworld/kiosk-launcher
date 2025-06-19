@@ -1,0 +1,39 @@
+{
+  "name": "kiosk-launcher",
+  "version": "1.0.0",
+  "description": "Launch any website in Chrome kiosk mode",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "dev": "electron . --dev"
+  },
+  "build": {
+    "appId": "com.kiosklauncher.app",
+    "productName": "KioskLauncher",
+    "directories": {
+      "output": "dist"
+    },
+    "files": ["src/**/*", "assets/**/*"],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.0.0"
+  }
+}
