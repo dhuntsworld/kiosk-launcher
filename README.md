@@ -1,4 +1,4 @@
-KioskLauncher v1.0.0
+KioskLauncher
 ====================
 
 WHAT IT DOES:
@@ -17,5 +17,5 @@ REQUIREMENTS:
 - Windows 10 or 11 (64-bit)
 - Google Chrome browser
 
-SUPPORT:
-Visit: https://your-website.com
+
+Visit: https://kiosklauncher.vercel.app/
